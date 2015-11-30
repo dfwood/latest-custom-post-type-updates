@@ -65,6 +65,7 @@ Initial plugin release
 = 2.0.0 =
 * COMPLETE REWRITE
 * Will remove existing widgets created by older versions of this plugin
+* Changed the filename of the base plugin file! If you are upgrading you may need to reactivate the plugin!
 = 1.3.0 =
 * NOW REQUIRES JavaScript and WordPress 3.3+
 * Added excerpt, thumbnail, sorting, and multiple post type support
