@@ -1,14 +1,14 @@
 === Latest Custom Post Type Updates ===
-Contributors:      technical_mastermind
+Contributors:      dfwood90
 Plugin Name:       Latest Custom Post Type Updates
 Plugin URI:        http://technicalmastermind.com/wordpress-plugins/latest-custom-post-type-updates/
 Tags:              widget, custom post type, latest updates, latest post, latest posts, latest custom posts, latest, filter posts, filter, filter custom posts, filter custom post types, widget-only
-Author URI:        http://technicalmastermind.com/about-david-wood/
+Author URI:        http://davidwood.ninja/
 Author:            David Wood
 Donate link:       http://technicalmastermind.com/donate/
-Requires at least: 3.3
-Tested up to:      3.4.2
-Stable tag:        1.3.0
+Requires at least: 4.4
+Tested up to:      4.4
+Stable tag:        2.0.0
 
 Simple widgetized display of the latest posts in your custom post type. Also allows for easy filtered display of regular posts in a widget.
 
@@ -29,7 +29,7 @@ While this plugin allows for quick and easy use, there are also LOADS of advance
 * Restrict posts by taxonomy and taxonomy terms
 
 = A word on support and additional features =
-If you find any bugs, please let me know! In an effort to help others looking for similar answers and to help build the WordPress.org community I ask that all bug reports, requests for support and feature requests be made through the [WordPress.org forums](http://wordpress.org/support/plugin/latest-custom-post-type-updates).
+Due to time constraints, I am not able to keep up with this plugin as much as I would like. If you want to help keep it up do date, feel free to create a pull request on the [GitHub repo](https://github.com/dfwood90/latest-cutom-post-type-updates)!
 
 == Installation ==
 1. Copy the entire "latest-custom-post-type-updates" folder into your wp-content/plugins folder.
@@ -39,14 +39,17 @@ If you find any bugs, please let me know! In an effort to help others looking fo
 
 == Frequently Asked Questions ==
 = Can you add 'some feature' to the plugin? =
-Ask me in the [WordPress.org forums](http://wordpress.org/support/plugin/latest-custom-post-type-updates) and I will let you know. Note that not all requests will be added, but I will probably have a reason not to.
+I will only add features to the plugin that I deem as beneficial to my original purpose of the plugin and are general enough that they can be used by others in various situations. Also, due to time constraints, I may not have the time to add the feature myself. If you know how to code, feel free to create a pull request on my [GitHub repo](https://github.com/dfwood90/latest-cutom-post-type-updates) and I will review it and merge it in if I see it as beneficial. Please follow [WordPress coding standards](https://make.wordpress.org/core/handbook/best-practices/coding-standards/) when formatting code!
 
 == Screenshots ==
+TODO!
 1. The widget configuration options
 2. The widget displaying the latest posts in a custom post type
 3. Advanced configuration options
 
 == Upgrade Notice ==
+= 2.0.0 =
+MAJOR UPDATE! WILL REMOVE EXISTING WIDGETS (from this plugin)! This is a complete rewrite and overhaul to make everything more intuitive and clean. Consider this to NOT be backwards compatible.
 = 1.3.0 =
 REQUIRES JAVASCRIPT & WORDPRESS 3.3+! Major update adding support for several requested features.
 = 1.2.1 =
@@ -59,6 +62,9 @@ Added in missing closing UL tag
 Initial plugin release
 
 == Changelog ==
+= 2.0.0 =
+* COMPLETE REWRITE
+* Will remove existing widgets created by older versions of this plugin
 = 1.3.0 =
 * NOW REQUIRES JavaScript and WordPress 3.3+
 * Added excerpt, thumbnail, sorting, and multiple post type support
