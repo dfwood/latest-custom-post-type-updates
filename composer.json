@@ -1,0 +1,13 @@
+{
+  "name": "dfwood90/latest-custom-post-type-updates",
+  "description": "A plugin to display the latest posts in a custom post type.",
+  "type": "wordpress-plugin",
+  "license": "GPL-3.0+",
+  "authors": [
+    {
+      "name": "David Wood",
+      "email": "dfwood90@gmail.com",
+      "role": "Developer"
+    }
+  ]
+}

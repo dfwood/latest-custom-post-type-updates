@@ -1,0 +1,11 @@
+# Mac Users
+.DS_Store
+
+# Node.js
+node_modules
+
+# SASS
+.sass-cache
+
+# PHP Storm
+.idea
