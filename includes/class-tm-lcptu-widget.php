@@ -59,9 +59,10 @@ class TM_LCPTU_Widget extends WP_Widget {
 
 		// Setup our query args
 		$query_args = array(
-			'post_type'      => $instance['post_type'],
-			'posts_per_page' => $instance['number'],
-			'orderby'        => $instance['orderby'],
+			'post_type'           => $instance['post_type'],
+			'posts_per_page'      => $instance['number'],
+			'orderby'             => $instance['orderby'],
+			'ignore_sticky_posts' => true,
 		);
 		// Run our query
 		$recent_posts = new WP_Query( $query_args );

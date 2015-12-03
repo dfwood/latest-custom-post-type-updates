@@ -6,46 +6,62 @@ Tags:              widget, custom post type, latest updates, latest post, latest
 Author URI:        http://davidwood.ninja/
 Author:            David Wood
 Donate link:       http://technicalmastermind.com/donate/
+License:           GPLv3
 Requires at least: 4.4
 Tested up to:      4.4
 Stable tag:        2.0.0
 
-Simple widgetized display of the latest posts in your custom post type. Also allows for easy filtered display of regular posts in a widget.
+Simple widget to display the latest posts from any post type! Has several advanced options as well!
 
 == Description ==
-= Simplicity at its finest! =
-This simple plugin adds a widget that allows for the display of recent posts in any custom post type. It functions almost identically to the built-in WordPress "Recent Posts" widget with the added option of letting you choose which post type it pulls from. Just add the "Latest Custom Post Type" widget to a widget area, give it a title, how many posts to show and what post type you want it to pull from. It's that easy!
+A simple widget that allows quick and easy display of posts from (nearly) any post type. It also has a set of advanced features:
 
-= Advanced Options =
-While this plugin allows for quick and easy use, there are also LOADS of advanced features that site owners, designers, and developers will all enjoy.
+* Ability to show posts from multiple post types, in one widget
+* Can sort results by one or more criteria
+* Can display the date in any format you want
+* Developer filters for even more customization of output (requires use of PHP code)
 
-* Change how the posts are pulled (e.g. Publish date, modified date, meta keys)
-* Change how they are displayed (e.g. Pull by modified date, but show in alphabetical order)
-* Define custom text for when there are no posts to show (defaults to showing nothing)
-* Define custom CSS classes
-* Show post thumbnails with the option of a default thumbnail image and custom size
-* Show the post date/time or post modified date/time and specify the format
-* Show post excerpts, specifying the length and read more link text
-* Restrict posts by taxonomy and taxonomy terms
+= Notice for versions older than 2.0 =
+I am not supporting versions older than 2.0 and the 2.0 release does not migrate widgets from older versions.
 
 = A word on support and additional features =
-Due to time constraints, I am not able to keep up with this plugin as much as I would like. If you want to help keep it up do date, feel free to create a pull request on the [GitHub repo](https://github.com/dfwood90/latest-cutom-post-type-updates)!
+Due to time constraints, I am not able to keep up with this plugin as much as I would like. If you want to help keep it up to date, feel free to create a pull request on the [GitHub repo](https://github.com/dfwood90/latest-custom-post-type-updates)!
 
 == Installation ==
 1. Copy the entire "latest-custom-post-type-updates" folder into your wp-content/plugins folder.
 2. Activate the plugin.
 3. Add the widget to a widget area and select your options.
-4. Get the latest custom post type updates on any page!
+4. See the latest post updates on any page!
 
 == Frequently Asked Questions ==
 = Can you add 'some feature' to the plugin? =
-I will only add features to the plugin that I deem as beneficial to my original purpose of the plugin and are general enough that they can be used by others in various situations. Also, due to time constraints, I may not have the time to add the feature myself. If you know how to code, feel free to create a pull request on my [GitHub repo](https://github.com/dfwood90/latest-cutom-post-type-updates) and I will review it and merge it in if I see it as beneficial. Please follow [WordPress coding standards](https://make.wordpress.org/core/handbook/best-practices/coding-standards/) when formatting code!
+I will only add features to the plugin that I deem as beneficial to my original purpose of the plugin and are general enough that they can be used by others in various situations. Also, due to time constraints, I may not have the time to add the feature myself (or it may take a long time). If you know how to code, feel free to create a pull request on my [GitHub repo](https://github.com/dfwood90/latest-custom-post-type-updates) and I will review it and merge it in if I see it as beneficial. Please follow [WordPress coding standards](https://make.wordpress.org/core/handbook/best-practices/coding-standards/) when formatting code!
+
+tldr; I probably won't unless you write it yourself and do a pull request on the [GitHub repo](https://github.com/dfwood90/latest-custom-post-type-updates).
+
+= This plugin used to do "X", why doesn't it do that anymore? =
+When I rewrote the plugin, I tried to add support for new WordPress features that weren't available at the time previous versions were written. During that process, I tried to think through the best way to handle all the features and I decided some features would not be "officially" supported anymore. Some of them may make their way back into the plugin in the future while others can be added back via WordPress filters. Everything that was possible before should be possible now, but some of the older features now require some coding (since I am not "officially" supporting them).
+
+tldr; Because I took that feature out. The new filters can replicate that feature with some code.
 
 == Screenshots ==
 TODO!
 1. The widget configuration options
 2. The widget displaying the latest posts in a custom post type
 3. Advanced configuration options
+
+== WP Filters ==
+= `lcptu_wrapper_tag` =
+Allows changing of the wrapper tag that wraps all posts in the widget. By default it is a `<ul>` tag. Passes `$tag` (string, default is "ul") and `$sidebar_id` (string, id of the sidebar widget is being output in).
+
+= `lcptu_single_wrapper_tag` =
+Allows changing of the wrapper tag on individual posts in the widget. By default it is a `<li>` tag. Passes `$tag` (string, default is "li") and `$sidebar_id` (string, id of the sidebar widget is being output in).
+
+= `lcptu_single_wrapper_classes` =
+Runs during the loop. Allows changing the CSS classes applied to the wrapper of individual posts in the widget. Passes `$classes` (array, CSS classes that will be output) and `$sidebar_id` (string, id of the sidebar widget is being output in).
+
+= `lcptu_single_content_html` =
+Runs during the loop. Allows filtering the HTML markup for individual posts in the widget. Does not include the wrapper tag. Passes `$content` (string, HTML that will be output), `$sidebar_id` (string, id of the sidebar widget is being output in), and `$recent_posts` (WP_Query object containing posts that will be output in the widget).
 
 == Upgrade Notice ==
 = 2.0.0 =
@@ -64,8 +80,9 @@ Initial plugin release
 == Changelog ==
 = 2.0.0 =
 * COMPLETE REWRITE
-* Will remove existing widgets created by older versions of this plugin
+* Will NOT migrate existing widgets created by older versions of this plugin! (older than 2.0)
 * Changed the filename of the base plugin file! If you are upgrading you may need to reactivate the plugin!
+* Added some filters! You can now edit almost everything through PHP code.
 = 1.3.0 =
 * NOW REQUIRES JavaScript and WordPress 3.3+
 * Added excerpt, thumbnail, sorting, and multiple post type support

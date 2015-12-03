@@ -2,7 +2,7 @@
 /*
  * Plugin Name: Latest Custom Post Type Updates
  * Plugin URI: http://technicalmastermind.com/wordpress-plugins/latest-custom-post-type-updates/
- * Description: This simple plugin adds a widget that allows for the display of recent posts in any custom post type. It functions almost identically to the built-in WordPress "Recent Posts" widget with the added option of letting you choose which post type it pulls from. Just add the "Latest Custom Post Type" widget to a widget area, give it a title, how many posts to show and what post type you want it to pull from. Also comes with a plethora of advanced settings to explore!
+ * Description: A simple widget that allows quick and easy display of posts from (nearly) any post type. It also has a set of advanced features: Ability to show posts from multiple post types, in one widget; Can sort results by one or more criteria; Can display the date in any format you want; Developer filters for even more customization of output (requires use of PHP code)
  * Version: 2.0.0
  * Author: David Wood
  * Author URI: http://davidwood.ninja/
@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 class TM_LCPTU {
 
 	public function __construct() {
-		require_once( __DIR__ . '/class-tm-lcptu-widget.php' );
+		require_once( __DIR__ . '/includes/class-tm-lcptu-widget.php' );
 		add_action( 'widgets_init', array( $this, '_register_widget' ) );
 		add_action( 'admin_enqueue_scripts', array( $this, '_admin_enqueue_scripts' ) );
 	}
