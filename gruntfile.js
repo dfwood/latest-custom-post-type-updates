@@ -3,20 +3,20 @@ module.exports = function (grunt) {
     var js = {
         uglify: {
             //'dest': 'src'
-            'js/tm-lcptu-admin-options.min.js': 'js/tm-lcptu-admin-options.js'
+            'js/tm-lcptu-admin.min.js': 'js/tm-lcptu-admin.js'
         },
-        watch: ['js/**/*.js']
+        watch: ['js/tm-lcptu-admin.js']
     };
-    /*var css = {
+    var css = {
         dest: {
-            dev: 'css/tm-lcptu.css',
-            min: 'css/tm-lcptu.min.css'
+            dev: 'css/tm-lcptu-admin.css',
+            min: 'css/tm-lcptu-admin.min.css'
         }
     };
     var scss = {
-        main: 'css/scss/main.scss',
-        watch: ['css/scss/!**!/!*.scss']
-    };*/
+        main: 'css/scss/main-admin.scss',
+        watch: ['css/scss/**/*.scss']
+    };
 
     /** STOP EDITING! **/
     var path = require('path');
@@ -24,9 +24,9 @@ module.exports = function (grunt) {
         configPath: path.join(process.cwd(), '.grunt'),
         init: true,
         data: {
-            js: js/*,
+            js: js,
             css: css,
-            scss: scss*/
+            scss: scss
         }
     });
 };

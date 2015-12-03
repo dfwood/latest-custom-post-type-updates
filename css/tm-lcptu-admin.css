@@ -1,0 +1,60 @@
+/* line 1, scss/_options_headers.scss */
+.tm_lcptu_widget_section {
+  margin: 5px -10px;
+}
+/* line 4, scss/_options_headers.scss */
+.tm_lcptu_widget_section h5 {
+  background: #fafafa;
+  border: 1px solid #e5e5e5;
+  font-size: 1em;
+  margin: 0;
+  padding: 0.5em 35px 0.5em 0.5em;
+  position: relative;
+}
+/* line 11, scss/_options_headers.scss */
+.tm_lcptu_widget_section h5:hover {
+  cursor: pointer;
+  border-color: #999999;
+}
+/* line 15, scss/_options_headers.scss */
+.tm_lcptu_widget_section h5:after {
+  display: inline-block;
+  color: #999999;
+  content: '\f140';
+  font: normal 16px/1 'dashicons';
+  height: auto;
+  padding-top: 7px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 30px;
+}
+/* line 30, scss/_options_headers.scss */
+.tm_lcptu_widget_section .tm_lcptu_widget_section_inner {
+  display: none;
+}
+/* line 35, scss/_options_headers.scss */
+.tm_lcptu_widget_section.expanded h5:after {
+  content: '\f142';
+}
+/* line 40, scss/_options_headers.scss */
+.tm_lcptu_widget_section:last-of-type {
+  margin-bottom: 15px;
+}
+
+/* line 1, scss/_section_inner.scss */
+.tm_lcptu_widget_section_inner {
+  border: 1px solid #e5e5e5;
+  border-top: none;
+  overflow: hidden;
+  overflow-y: auto;
+  padding: 0 10px;
+}
+
+/* line 9, scss/_section_inner.scss */
+.tm_lcptu_extra_options_wrap {
+  overflow: hidden;
+}
+
+/*# sourceMappingURL=tm-lcptu-admin.css.map */

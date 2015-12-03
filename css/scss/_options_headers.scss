@@ -1,0 +1,43 @@
+.tm_lcptu_widget_section {
+  margin: 5px -10px;
+
+  h5 {
+    background: $bg_color;
+    border: 1px solid $border_color;
+    font-size: 1em;
+    margin: 0;
+    padding: 0.5em 35px 0.5em 0.5em;
+    position: relative;
+    &:hover {
+      cursor: pointer;
+      border-color: $hover_border_color;
+    }
+    &:after {
+      display: inline-block;
+      color: $hover_border_color;
+      content: '\f140';
+      font: normal 16px/1 'dashicons';
+      height: auto;
+      padding-top: 7px;
+      position: absolute;
+      right: 0;
+      text-align: center;
+      top: 0;
+      width: 30px;
+    }
+  }
+
+  .tm_lcptu_widget_section_inner {
+    display: none;
+  }
+
+  &.expanded {
+    h5:after {
+      content: '\f142';
+    }
+  }
+
+  &:last-of-type {
+    margin-bottom: 15px;
+  }
+}
